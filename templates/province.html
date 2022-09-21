@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block linkactive %}active{% endblock linkactive %}
+{% block title %}Province | प्रदेश | Nepal | Website{% endblock title%}
+{% load static %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="top">Province Website Link</h1>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="top1">S.N.</th>
+            <th scope="col" class="top1">Province | प्रदेश</th>
+            <th scope="col" class="top1">Website Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for province in metro %}
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <td>{{province.Website_Title}}</td>
+              <td><a href="{{province.Website_Link}}" target="_blank">{{province.Website_Link}}</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+       <hr>
+</div>
+ 
+
+{% endblock body %}

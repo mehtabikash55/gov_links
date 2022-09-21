@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block Homeactive %}active{% endblock Homeactive %}
+{% block title %}Website | Nepal | Home{% endblock title%}
+{% load static %}
+
+{% block body %}
+
+    {% comment %} Nepal Government Website Link {% endcomment %}
+    <div class="container">
+        <h1 class="top">Nepal Government Website Link</h1>
+    </div>
+
+    {% comment %} Ministry | मन्त्रालय {% endcomment %}
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="top1">S.N.</th>
+                <th scope="col" class="top1">Ministry | मन्त्रालय</th>
+                <th scope="col" class="top1">Website Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for home_page in metro %}
+                <tr>
+                  <th scope="row">{{forloop.counter}}</th>
+                  <td>{{home_page.Website_Title}}</td>
+                  <td><a href="{{home_page.Website_Link}}" target="_blank">{{home_page.Website_Link}}</a></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+           <hr>
+    </div>
+
+{% endblock body %}

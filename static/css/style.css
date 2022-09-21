@@ -1,0 +1,47 @@
+/* body{
+	background: #000;
+} */
+.img-mg{
+	margin-right: 165px;
+}
+.img-flag{
+	/* padding-right: 165px; */
+    height: 65px;
+    margin-top: 10px;
+}
+.top {
+	text-align: center;
+	color: red;
+	font-size: 48px;
+	font-weight: 800;
+	margin-bottom: 30px;
+	text-decoration: underline;
+}
+.top1{
+	text-align: center;
+}
+.but_mg{
+	margin-left: 10px;
+}
+.bik {
+	font-size: 30px;
+	margin-bottom: 30px;
+	color: rgb(17, 0, 255);
+}
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 18px;
+}
+
+td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}

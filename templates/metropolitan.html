@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block linkactive %}active{% endblock linkactive %}
+{% block title %}Metropolitan Municipality / महानगरपालिका | Nepal | Website{% endblock title%}
+{% load static %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="top">Metropolitan Municipality Website Link</h1>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="top1">S.N.</th>
+            <th scope="col" class="top1">Metropolitan Municipality / महानगरपालिका</th>
+            <th scope="col" class="top1">Website Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for metropolitan in metro %}
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <td>{{metropolitan.Website_Title}}</td>
+              <td><a href="{{metropolitan.Website_Link}}" target="_blank">{{metropolitan.Website_Link}}</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+       <hr>
+</div>
+
+
+{% endblock body %}

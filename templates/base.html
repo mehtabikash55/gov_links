@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    {% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+    <title>{% block title %}{% endblock title%}</title>
+
+    {% comment %} <!-- Bootstrap --> {% endcomment %}
+    <link href="{% static 'css/bootstrap.css' %}/" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css' %}/" rel="stylesheet" />
+    <link href="{% static 'css/main.css' %}/" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}/" rel="stylesheet" />
+    <link href="{% static 'css/animate.css' %}/" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    {% comment %} <!--Header Start--> {% endcomment %}
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">WEBSITE</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link {% block Homeactive %} {% endblock Homeactive %}" href="/">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle {% block linkactive %} {% endblock linkactive %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Get into Links</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/gov_forms">Online gov.np Form</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="/provinces">Province | प्रदेश</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="/metropolitans">Metropolitan Municipality | महानगरपालिका</a></li>
+                                    <li><a class="dropdown-item" href="/sub_metropolitans">Sub-Metropolitan Municipality | उपमहानगरपालिका</a></li>
+                                    <li><a class="dropdown-item" href="/municipalities">Municipality | नगरपालिका</a></li>
+                                    <li><a class="dropdown-item" href="/rural_municipalities">Rural Municipality | गाउँपालिका</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="/Social_Media">Social Media</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block contactactive %}{% endblock contactactive %}" href="/contact">Contact Us</a>
+                            </li>
+                        </ul>
+                        <a href="/" class="img-mg"><img src="{% static 'images/nepal.gif' %}" class="img-flag" alt="logo"></a>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query" id="query">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <a href="/admin" target="_blank" class="but_mg"><button class="btn btn-outline-success" type="button">Admin</button></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    {% comment %} <!--Header End--> {% endcomment %}
+
+    {% block body %}
+
+    {% endblock body %}
+
+    <footer class="bg-light text-center text-lg-start">
+        {% comment %} <!-- Copyright --> {% endcomment %}
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          <a class="text-dark" href="mailto:mehtabikash55@gmail.com" target="_blank">mehtabikash55@gmail.com</a>
+          : © 2022. All right Reserved.
+        </div>
+        {% comment %} <!-- Copyright --> {% endcomment %}
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
